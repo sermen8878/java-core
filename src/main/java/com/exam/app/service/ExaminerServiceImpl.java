@@ -1,4 +1,4 @@
-﻿package com.exam.app.service;
+package com.exam.app.service;
 
 import com.exam.app.model.Question;
 import org.springframework.http.HttpStatus;
@@ -25,7 +25,7 @@ public class ExaminerServiceImpl implements ExaminerService {
         if (amount > allQuestions.size()) {
             throw new ResponseStatusException(
                 HttpStatus.BAD_REQUEST, 
-                \"Requested amount exceeds available questions\"
+                "Requested amount exceeds available questions"
             );
         }
 

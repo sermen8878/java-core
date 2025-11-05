@@ -1,4 +1,4 @@
-﻿package com.exam.app.service;
+package com.exam.app.service;
 
 import com.exam.app.model.Question;
 import org.junit.jupiter.api.Test;
@@ -26,14 +26,14 @@ class ExaminerServiceImplTest {
     @Test
     void testGetQuestions() {
         Set<Question> mockQuestions = new HashSet<>();
-        mockQuestions.add(new Question(\"Q1\", \"A1\"));
-        mockQuestions.add(new Question(\"Q2\", \"A2\"));
-        mockQuestions.add(new Question(\"Q3\", \"A3\"));
+        mockQuestions.add(new Question("Q1", "A1"));
+        mockQuestions.add(new Question("Q2", "A2"));
+        mockQuestions.add(new Question("Q3", "A3"));
 
         when(javaQuestionService.getAll()).thenReturn(mockQuestions);
         when(javaQuestionService.getRandomQuestion())
-                .thenReturn(new Question(\"Q1\", \"A1\"))
-                .thenReturn(new Question(\"Q2\", \"A2\"));
+                .thenReturn(new Question("Q1", "A1"))
+                .thenReturn(new Question("Q2", "A2"));
 
         var result = examinerService.getQuestions(2);
 
@@ -44,7 +44,7 @@ class ExaminerServiceImplTest {
     @Test
     void testGetQuestionsExceedingLimit() {
         Set<Question> mockQuestions = new HashSet<>();
-        mockQuestions.add(new Question(\"Q1\", \"A1\"));
+        mockQuestions.add(new Question("Q1", "A1"));
 
         when(javaQuestionService.getAll()).thenReturn(mockQuestions);
 
