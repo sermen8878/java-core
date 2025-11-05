@@ -1,4 +1,4 @@
-﻿package com.exam.app.service;
+package com.exam.app.service;
 
 import com.exam.app.model.Question;
 import org.springframework.stereotype.Service;
@@ -40,7 +40,7 @@ public class JavaQuestionService implements QuestionService {
     @Override
     public Question getRandomQuestion() {
         if (questions.isEmpty()) {
-            throw new IllegalStateException(\"No questions available\");
+            throw new IllegalStateException("No questions available");
         }
         int randomIndex = random.nextInt(questions.size());
         return questions.stream()

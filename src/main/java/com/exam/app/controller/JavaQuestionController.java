@@ -1,4 +1,4 @@
-﻿package com.exam.app.controller;
+package com.exam.app.controller;
 
 import com.exam.app.model.Question;
 import com.exam.app.service.JavaQuestionService;
@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Collection;
 
 @RestController
-@RequestMapping(\"/exam/java\")
+@RequestMapping("/exam/java")
 public class JavaQuestionController {
     
     private final JavaQuestionService javaQuestionService;
@@ -16,12 +16,12 @@ public class JavaQuestionController {
         this.javaQuestionService = javaQuestionService;
     }
 
-    @GetMapping(\"/add\")
+    @GetMapping("/add")
     public Question addQuestion(@RequestParam String question, @RequestParam String answer) {
         return javaQuestionService.add(question, answer);
     }
 
-    @GetMapping(\"/remove\")
+    @GetMapping("/remove")
     public Question removeQuestion(@RequestParam String question, @RequestParam String answer) {
         Question questionToRemove = new Question(question, answer);
         return javaQuestionService.remove(questionToRemove);

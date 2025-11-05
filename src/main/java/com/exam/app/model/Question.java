@@ -1,4 +1,4 @@
-﻿package com.exam.app.model;
+package com.exam.app.model;
 
 import java.util.Objects;
 
@@ -34,6 +34,6 @@ public class Question {
 
     @Override
     public String toString() {
-        return \"Question: \" + question + \" | Answer: \" + answer;
+        return "Question: " + question + " | Answer: " + answer;
     }
 }
